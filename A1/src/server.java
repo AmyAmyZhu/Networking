@@ -42,8 +42,8 @@ public class server {
 
             DataOutputStream outputStream = new DataOutputStream(client_socket.getOutputStream());
             DatagramSocket UDP_socket = new DatagramSocket(0);
-            int random_port = UDP_socket.getLocalPort();
-            outputStream.writeBytes(random_port + "\n");
+            int r_port = UDP_socket.getLocalPort();
+            outputStream.writeBytes(r_port + "\n");
             reverseString(UDP_socket);
             UDP_socket.close();
         }
@@ -63,14 +63,22 @@ public class server {
     }
 
     private static void reverseString(DatagramSocket UDP_socket) throws Exception {
+        // Receive and send messages to client
         byte[] receive_message = new byte[1024];
         byte[] send_message = new byte[1024];
 
+        // Receive string from packet
         DatagramPacket receive_packet = new DatagramPacket(receive_message, receive_message.length);
         UDP_socket.receive(receive_packet);
+        
+        // Get client string
         String client_string = new String(receive_packet.getData());
+        // Get IPA address
         InetAddress IPA_address = receive_packet.getAddress();
+        // Get port
         int sb_port = receive_packet.getPort();
+        
+        // Reverse and save the message to client
         String reverse_string = new StringBuilder(client_string).reverse().toString();
         send_message = reverse_string.getBytes();
         DatagramPacket send_packet = new DatagramPacket(send_message, send_message.length, IPA_address, sb_port);

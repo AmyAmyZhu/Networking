@@ -1,0 +1,13 @@
+Introductory Socket Programming(Assignment 1) from Computer Networks(CS 456):
+
+Name: Zefang Zhu
+Student ID: 20510897
+Programming language: Java
+
+How to run:
+1. run Makefile: make
+2. Run server: ./server.sh <req_code>
+3. Run client: ./client.sh <server address> <n_port> <req_code> message
+
+make version: 3.81
+compilers version: Java programming language compiler(javac)

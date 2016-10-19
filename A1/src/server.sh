@@ -15,7 +15,7 @@
 #./server $1
 
 #For Java implementation
-#java server $1 
+java server $1 
 
 #For Python implementation
 #python server.py $1

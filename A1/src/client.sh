@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#Run script for client distributed as part of 
+#Run script for client distributed as part of
 #Assignment 1
 #Computer Networks (CS 456)
 #Number of parameters: 4
@@ -16,7 +16,7 @@
 #./client $1 $2 $3 "$4"
 
 #For Java implementation
-#java client $1 $2 $3 "$4"
+java client $1 $2 $3 "$4"
 
 #For Python implementation
 #python client.py $1 $2 $3 "$4"
