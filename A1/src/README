@@ -4,10 +4,38 @@ Name: Zefang Zhu
 Student ID: 20510897
 Programming language: Java
 
-How to run:
-1. run Makefile: make
-2. Run server: ./server.sh <req_code>
-3. Run client: ./client.sh <server address> <n_port> <req_code> message
+*****************************************************************************
 
-make version: 3.81
-compilers version: Java programming language compiler(javac)
+How to run:
+1. Unpack cs456-a1.zip file
+2. Run Makefile: make
+3. Run server: ./server.sh <req_code>
+4. Run client: ./client.sh <server address> <n_port> <req_code> message
+
+*****************************************************************************
+
+Make version: 3.81
+Compilers version: Java programming language compiler(javac)
+
+*****************************************************************************
+
+Executable files: server.java, client.java
+
+server.java:
+Number of parameters: 1
+Parameter:
+    $1: <req_code>
+
+client.java:
+Number of parameters: 4
+Parameter:
+    $1: <server_address>
+    $2: <n_port>
+    $3: <req_code>
+    $4: message
+
+*****************************************************************************
+
+Machines:
+ubuntu1404-002.student.cs.uwaterloo.ca as server
+ubuntu1404-004.student.cs.uwaterloo.ca as client
